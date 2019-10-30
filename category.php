@@ -1,35 +1,24 @@
-<?php
-require_once ("DB.php");
-//require("RedBeanPHP5_4/rb.php");
-//R::setup('mysql:host=localhost;dbname=infocomplect', 'infocomplect', '12345');
-$categories = R::getAll( 'SELECT * FROM categories');
+<?php require_once("header.php") ?>
+    <div class="container-fluid" style="margin-top:30px; margin-bottom: 30px;">
+        <h2>Категории</h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Номер</th>
+                <th>Наименование</th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php
+                require_once("DB.php");
+                $categories = R::getAll('SELECT * FROM categories');
+                foreach ($categories as $category) {
+                    echo "<tr><td>" . $category['idcategory'] . "</td><td>" . $category['name'] . "</td></tr>";
+                }
+                ?>
 
-    foreach ($categories as $category) {
-        echo $category['name'] . "<br>";
-    }
-
-var_dump($categories);
-
-
-
-
-
-
-//require_once ("DB.php");
-//require_once ("dbconfig.php");
-//
-//try {
-//    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $user, $pass);
-//    $stmt = $conn->prepare("SELECT * FROM categories");
-//    $stmt->execute();
-//    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-//    foreach ($stmt->fetchAll()as $k => $v) {
-//        $category = $v['name'];
-//        echo $category . "<br>";
-//    }
-//} catch (PDOException $e) {
-//    echo "Error: " . $e->getMessage();
-//}
-//$conn = null;
-
-
+            </tbody>
+        </table>
+    </div>
+<a class="btn btn-light" href="addcategory.php">Добавить категорию</a>
+<?php require_once("footer.php") ?>
