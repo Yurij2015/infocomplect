@@ -1,10 +1,6 @@
 <?php
-/**
- * Project: infocomplect
- * Filename: Category.php
- * Date: 10/30/2019
- * Time: 5:29 PM
- */
+
+namespace category;
 
 class Category
 {
@@ -14,5 +10,10 @@ class Category
     function __construct($name)
     {
         $this->name = $name;
+    }
+
+    function get_name()
+    {
+        return $this->name;
     }
 }

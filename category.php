@@ -1,43 +1,35 @@
 <?php
-require_once "dbconnect.php";
-require_once "category.php";
+require_once ("DB.php");
+//require("RedBeanPHP5_4/rb.php");
+//R::setup('mysql:host=localhost;dbname=infocomplect', 'infocomplect', '12345');
+$categories = R::getAll( 'SELECT * FROM categories');
 
-class TableRows extends RecursiveIteratorIterator
-{
-    function __construct($it)
-    {
-        parent::__construct($it, self::LEAVES_ONLY);
+    foreach ($categories as $category) {
+        echo $category['name'] . "<br>";
     }
 
-    function current()
-    {
-        return "<td style='width: 150px; border: 1px solid black;'>" . parent::current() . "</td>";
-    }
+var_dump($categories);
 
-    function beginChildren()
-    {
-        echo "<tr>";
-    }
 
-    function endChildren()
-    {
-        echo "</tr>" . "\n";
-    }
-}
 
-try {
 
-    $stmt = $conn->prepare("SELECT * FROM categories");
-    $stmt->execute();
-    echo "<table style='border: solid 1px black;'>";
-    echo "<tr><th>Номер</th><th>Категория</th></tr>";
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    foreach (new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
-        echo $v;
-    }
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-$conn = null;
-echo "</table>";
+
+
+//require_once ("DB.php");
+//require_once ("dbconfig.php");
+//
+//try {
+//    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $user, $pass);
+//    $stmt = $conn->prepare("SELECT * FROM categories");
+//    $stmt->execute();
+//    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+//    foreach ($stmt->fetchAll()as $k => $v) {
+//        $category = $v['name'];
+//        echo $category . "<br>";
+//    }
+//} catch (PDOException $e) {
+//    echo "Error: " . $e->getMessage();
+//}
+//$conn = null;
+
 

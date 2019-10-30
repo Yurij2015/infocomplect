@@ -1,22 +1,10 @@
 <?php
-/**
- * Project: infocomplect
- * Filename: dbconnect.php
- * Date: 10/30/2019
- * Time: 4:57 PM
- */
-//$server = "127.0.0.1";
-//$user = "root";
-//$pass = "";
 
 $servername = "localhost";
-$user = "root";
-$pass = "";
+$user = "infocomplect";
+$pass = "12345";
 $dbname = "infocomplect";
 
-
-//$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-//$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $user, $pass);
