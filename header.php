@@ -20,19 +20,19 @@
             <a class="nav-link" href="/category/category.php">Категории</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Товары</a>
+            <a class="nav-link" href="/products/products.php">Товары</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Клиенты</a>
+            <a class="nav-link" href="/customers/customers.php">Клиенты</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Менеджеры</a>
+            <a class="nav-link" href="/managers/managers.php">Менеджеры</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Заказы</a>
+            <a class="nav-link" href="/orders/orders.php">Заказы</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Товары в заказе</a>
+            <a class="nav-link" href="/productsoforder/productoforders.php">Товары в заказе</a>
         </li>
     </ul>
 </nav>

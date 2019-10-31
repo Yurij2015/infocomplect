@@ -3,11 +3,11 @@ require_once("../DB.php");
 try {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        $category = R::load('categories', $id);
-        R::trash($category);
-        header('location: category.php?msg=Запись удалена!');
+        $products = R::load('products', $id);
+        R::trash($products);
+        header('location: products.php?msg=Запись удалена!');
     }
 } catch (exception $e) {
     echo "Запись нельзя удалить. Есть связанные данные!";
-    echo "<br><a href = 'category.php'>Назад</a>";
+    echo "<br><a href = 'products.php'>Назад</a>";
 }

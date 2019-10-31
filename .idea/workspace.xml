@@ -2,28 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3b6a1b0-61e9-4fad-97a3-c1b47c93f968" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/category/addcategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/category/category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/category/categorydelete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/category/categoryupdate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customers/addcategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customers/category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customers/categorydelete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customers/categoryupdate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/store.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/store.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/confirmdelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/managers/addcategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/managers/category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/managers/categorydelete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/managers/categoryupdate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addcategory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/categorydelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/category/categorydelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/customers/addcustomer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/customers/customers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/categorydelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/customers/customerdelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/categoryupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/customers/customerupdate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managers/addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/addmanager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managers/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/managers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managers/categorydelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/managerdelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managers/categoryupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/managerupdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/orders/addorder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/orders/orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/categorydelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/orders/orderdelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/categoryupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/orders/orderupdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/addproduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/categorydelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/productdelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/categoryupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/products/productupdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsoforder/addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/productsoforder/addprodoford.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsoforder/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/productsoforder/productoforders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsoforder/categorydelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/productsoforder/prodofordersdelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsoforder/categoryupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/productsoforder/prodofordupdate.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +85,20 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="infocomplect: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="managers: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="infocomplect@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="infocomplect: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="orders: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="infocomplect@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="infocomplect: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="products: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -161,7 +177,7 @@
       <workItem from="1572432382360" duration="12459000" />
       <workItem from="1572457370234" duration="282000" />
       <workItem from="1572457720949" duration="15984000" />
-      <workItem from="1572492743910" duration="9719000" />
+      <workItem from="1572492743910" duration="18995000" />
     </task>
     <servers />
   </component>
