@@ -1,6 +1,5 @@
 <?php $title = "Главная"; ?>
 <?php require_once("header.php") ?>
-
 <div class="container">
     <div class="jumbotron">
         <h1>InfoComplect</h1>

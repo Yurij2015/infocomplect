@@ -1,3 +1,15 @@
+<?php
+session_start();
+if ($_SESSION['admin'] != "admin") {
+    header("Location: /login.php");
+    exit;
+}
+if ($_GET['do'] == 'logout') {
+    unset($_SESSION['admin']);
+    session_destroy();
+    header("Location: /index.php");
+}
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -31,8 +43,12 @@
         <li class="nav-item">
             <a class="nav-link" href="/orders/orders.php">Заказы</a>
         </li>
+
         <li class="nav-item">
             <a class="nav-link" href="/productsoforder/productoforders.php">Товары в заказе</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-outline-info" href="/index.php?do=logout">Выйти</a>
         </li>
     </ul>
 </nav>
