@@ -16,7 +16,7 @@ if ($_POST) {
     }
 }
 ?>
-<?php $title = "Добавить продукт"; ?>
+<?php $title = "Добавить клиента"; ?>
 <?php require_once("../header.php") ?>
     <div class="container" style="margin-top:30px; margin-bottom: 30px;">
         <div class="row">
@@ -39,7 +39,7 @@ if ($_POST) {
                         <input type="email" class="form-control" name="email" id="email">
                     </div>
 
-                    <button type="submit" class="btn btn-success">Сохранить товар</button>
+                    <button type="submit" class="btn btn-success">Сохранить клиента</button>
                     <a href="customers.php" class="btn btn-info">Назад</a>
                 </form>
             </div>

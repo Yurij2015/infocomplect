@@ -2,34 +2,108 @@
 require_once("../DB.php");
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $category = R::load('categories', $id);
-    $categoryname = $category->categoryname;
+    $orders = R::load('orders', $id);
+    $date = $orders->date;
+    $status = $orders->status;
+    $managers_idmanager = $orders->managers_idmanager;
+    $customers_idcustomer = $orders->customers_idcustomer;
 }
-if (isset($_POST['categoryname'])) {
-    $categoryname = trim(htmlspecialchars($_POST['categoryname']));
-    if (!empty($categoryname)) {
-        require_once("../DB.php");
-        $category = R::load('categories', $id);
-        $category->categoryname = $categoryname;
-        R::store($category);
-        header('location: category.php?msg=Записьуспешно обновлена!');
-    }
+
+if ($_POST) {
+    $date = trim(htmlspecialchars($_POST['date']));
+    $status = trim(htmlspecialchars($_POST['status']));
+    $managers_idmanager = $_POST['managers_idmanager'];
+    $category_idcategory = $_POST['customers_idcustomer'];
+//    if (!empty($productname)) {
+    require_once("../DB.php");
+    $orders = R::load('orders', $id);
+    $orders->date = $date;
+    $orders->status = $status;
+    $orders->managers_idmanager = $managers_idmanager;
+    $orders->customers_idcustomer = $category_idcategory;
+    R::store($orders);
+    header('location: orders.php?msg=Запись успешно добавлена!');
+//    }
 }
 ?>
-<?php $title = "Редактировать категорию"; ?>
+<?php $title = "Добавить заказ"; ?>
 <?php require_once("../header.php") ?>
     <div class="container" style="margin-top:30px; margin-bottom: 30px;">
         <div class="row">
             <div class="col-md-12">
                 <form method="post">
                     <div class="form-group">
-                        <label for="categoryname">Название категории</label>
-                        <input type="text" class="form-control" name="categoryname" id="categoryname" value="<?php echo $categoryname; ?>">
+                        <label for="date">Дата</label>
+                        <input type="date" class="form-control" name="date" id="date" value="<?= $date ?>">
                     </div>
-                    <button type="submit" class="btn btn-success">Сохранить категорию</button>
-                    <a href="category.php" class="btn btn-info">Назад</a>
+                    <div class="form-group">
+                        <label for="status">Статус</label>
+                        <select class="form-control" name="status" id="status">
+                            <option value="<?= $status; ?>" selected="selected">
+                                <?php
+                                switch ($status) {
+                                    case 1:
+                                        $statusvalue = "На рассмотрении";
+                                        break;
+                                    case 2:
+                                        $statusvalue = "На выполнеии";
+                                        break;
+                                    case 3:
+                                        $statusvalue = "Выполнен";
+                                        break;
+                                    case 4:
+                                        $statusvalue = "Отменен";
+                                        break;
+                                }
+                                ?>
+                                <?= $statusvalue; ?>
+                            </option>
+                            <option value="1">На рассмотрении</option>
+                            <option value="2">На выполнеии</option>
+                            <option value="3">Выполнен</option>
+                            <option value="4">Отменен</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="managers_idmanager">Менеджер</label>
+                        <select type="text" class="form-control" name="managers_idmanager" id="managers_idmanager">
+                            <?php
+//                            require_once("../DB.php");
+                            $managers = R::getAll('SELECT * FROM managers');
+                            ?>
+                            <option value="<?= $managers_idmanager; ?>" selected="selected">
+                                <?php $manager = R::load('managers', $managers_idmanager);
+                                echo $manager->name; ?>
+                            </option>
+                            <?php
+                            foreach ($managers as $manager) { ?>
+                                <option value="<?php echo $manager['id']; ?>">
+                                    <?php echo $manager['name']; ?>                                                                     </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="customers_idcustomer">Клиент</label>
+                        <select type="text" class="form-control" name="customers_idcustomer" id="customers_idcustomer">
+                            <?php
+                            require_once("../DB.php");
+                            $customers = R::getAll('SELECT * FROM customers');
+                            ?>
+                            <option value="<?= $customers_idcustomer; ?>" selected="selected">
+                                <?php $customer = R::load('customers', $customers_idcustomer);
+                                echo $customer->customername; ?>
+                            </option>
+                            <?php
+                            foreach ($customers as $customer) { ?>
+                                <option value="<?php echo $customer['id']; ?>">
+                                    <?php echo $customer['customername']; ?>                                                                     </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">Сохранить заказ</button>
+                    <a href="orders.php" class="btn btn-info">Назад</a>
                 </form>
             </div>
         </div>
     </div>
-<?php require_once("footer.php") ?>
+<?php require_once("../footer.php") ?>

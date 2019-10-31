@@ -16,7 +16,7 @@ if ($_POST) {
     $email = trim(htmlspecialchars($_POST['email'])) ?: null;
     if (!empty($customername)) {
         require_once("../DB.php");
-        $customers = R::load('customers');
+        $customers = R::load('customers', $id);
         $customers->customername = $customername;
         $customers->address = $address;
         $customers->phone = $phone;

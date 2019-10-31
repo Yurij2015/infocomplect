@@ -1,28 +1,32 @@
-<?php $title = "Категории"; ?>
+<?php $title = "Менеджеры"; ?>
 <?php require_once("../header.php") ?>
     <div class="container" style="margin-top:30px; margin-bottom: 30px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Категории</h2>
+                <h2><?php echo $title; ?></h2>
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th>Номер</th>
-                        <th>Наименование</th>
+                        <th>№</th>
+                        <th>ФИО</th>
+                        <th>Телефон</th>
+                        <th>Электронная почта</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
                     require_once("../DB.php");
-                    $categories = R::getAll('SELECT * FROM categories');
-                    foreach ($categories as $category) {
-                        $id = $category['id'];
+                    $managers = R::getAll('SELECT * FROM managers');
+                    foreach ($managers as $manager) {
+                        $id = $manager['id'];
                         echo "<tr>
                         <td>" . $id . "</td>
-                        <td>" . $category['categoryname'] . "</td>
-                        <td><a href='categoryupdate.php?id=$id' class='btn btn-info'>Редактировать</a>
-                        | <a href='categorydelete.php?id=$id' class='btn btn-warning' onclick='return confirmDelete();'>Удалить</a></td>
+                        <td>" . $manager['name'] . "</td>
+                        <td>" . $manager['phone'] . "</td>
+                        <td>" . $manager['email'] . "</td>
+                        <td><a href='managerupdate.php?id=$id' class='btn btn-info'>Редактировать</a>
+                        | <a href='managerdelete.php?id=$id' class='btn btn-warning' onclick='return confirmDelete();'>Удалить</a></td>
                       </tr>";
                     }
                     ?>
@@ -30,6 +34,6 @@
                 </table>
             </div>
         </div>
-        <a class="btn btn-light" href="addcategory.php">Добавить категорию</a>
+        <a class="btn btn-light" href="addmanager.php">Добавить менеджера</a>
     </div>
 <?php require_once("../footer.php") ?>
