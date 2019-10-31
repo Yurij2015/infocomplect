@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d3b6a1b0-61e9-4fad-97a3-c1b47c93f968" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customers/addcustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/customers/addcustomer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customers/customerupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/customers/customerupdate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managers/addmanager.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/addmanager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managers/managerdelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/managerdelete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managers/managers.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/managers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managers/managerupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/managerupdate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/addorder.php" beforeDir="false" afterPath="$PROJECT_DIR$/orders/addorder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/orderdelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/orders/orderdelete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/orders/orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/orderupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/orders/orderupdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsoforder/addprodoford.php" beforeDir="false" afterPath="$PROJECT_DIR$/productsoforder/addprodoford.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsoforder/prodofordersdelete.php" beforeDir="false" afterPath="$PROJECT_DIR$/productsoforder/prodofordersdelete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsoforder/prodofordupdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/productsoforder/prodofordupdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productsoforder/productoforders.php" beforeDir="false" afterPath="$PROJECT_DIR$/productsoforder/productoforders.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +166,7 @@
       <workItem from="1572432382360" duration="12459000" />
       <workItem from="1572457370234" duration="282000" />
       <workItem from="1572457720949" duration="15984000" />
-      <workItem from="1572492743910" duration="25539000" />
+      <workItem from="1572492743910" duration="28146000" />
     </task>
     <servers />
   </component>
