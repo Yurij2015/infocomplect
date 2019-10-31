@@ -37,7 +37,7 @@ CREATE TABLE `categories` (
 -- Дамп данных таблицы `categories`
 --
 
-INSERT INTO `categories` (`idcategory`, `name`) VALUES
+INSERT INTO `categories` (id, `name`) VALUES
 (1, 'бьбьбьб');
 
 -- --------------------------------------------------------
@@ -117,7 +117,7 @@ CREATE TABLE `productsoforders` (
 -- Индексы таблицы `categories`
 --
 ALTER TABLE `categories`
-  ADD PRIMARY KEY (`idcategory`);
+  ADD PRIMARY KEY (id);
 
 --
 -- Индексы таблицы `customers`
@@ -162,7 +162,7 @@ ALTER TABLE `productsoforders`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `idcategory` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `customers`
@@ -209,7 +209,7 @@ ALTER TABLE `orders`
 -- Ограничения внешнего ключа таблицы `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `fk_product_category` FOREIGN KEY (`category_idcategory`) REFERENCES `categories` (`idcategory`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_product_category` FOREIGN KEY (`category_idcategory`) REFERENCES `categories` (id) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `productsoforders`
